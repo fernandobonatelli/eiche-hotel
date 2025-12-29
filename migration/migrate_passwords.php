@@ -49,7 +49,7 @@ try {
         $password = $user['password'];
         
         // Verificar se já é BCrypt (começa com $2y$ ou $2a$)
-        if (str_starts_with($password, '$2y$') || str_starts_with($password, '$2a$')) {
+        if (substr($password, 0, 4) === '$2y$' || substr($password, 0, 4) === '$2a$') {
             echo "✓ Usuário <strong>{$user['login']}</strong>: Senha já em formato BCrypt\n";
             $alreadyMigrated++;
             continue;

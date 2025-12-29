@@ -111,11 +111,16 @@ function monthName(int $month, string $format = 'full'): string
         return 'Indefinido';
     }
     
-    $index = match($format) {
-        'short' => 1,
-        'upper' => 2,
-        default => 0
-    };
+    switch ($format) {
+        case 'short':
+            $index = 1;
+            break;
+        case 'upper':
+            $index = 2;
+            break;
+        default:
+            $index = 0;
+    }
     
     return $months[$month][$index];
 }
@@ -342,11 +347,13 @@ function e(string $text): string
 
 /**
  * Limpa entrada de dados
+ * @param mixed $data
+ * @return mixed
  */
-function sanitize(mixed $data): mixed
+function sanitize($data)
 {
     if (is_array($data)) {
-        return array_map(fn($item) => sanitize($item), $data);
+        return array_map(function($item) { return sanitize($item); }, $data);
     }
     
     if (is_string($data)) {
@@ -514,8 +521,9 @@ function isAjax(): bool
 
 /**
  * Retorna resposta JSON
+ * @return void
  */
-function jsonResponse(array $data, int $statusCode = 200): never
+function jsonResponse(array $data, int $statusCode = 200): void
 {
     http_response_code($statusCode);
     header('Content-Type: application/json; charset=utf-8');
@@ -525,8 +533,9 @@ function jsonResponse(array $data, int $statusCode = 200): never
 
 /**
  * Redireciona para outra página
+ * @return void
  */
-function redirect(string $url, int $statusCode = 302): never
+function redirect(string $url, int $statusCode = 302): void
 {
     http_response_code($statusCode);
     header("Location: {$url}");
