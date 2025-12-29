@@ -1,0 +1,49 @@
+{
+    "name": "eiche/hotel",
+    "description": "Sistema de Hotelaria e Cobrança - Eiche Hotel",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "version": "2.0.0",
+    "authors": [
+        {
+            "name": "Eiche Servicos",
+            "email": "contato@eiche.com.br"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "ext-mbstring": "*",
+        "ext-json": "*",
+        "ext-gd": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eiche\\": "app/",
+            "Eiche\\Config\\": "config/"
+        },
+        "files": [
+            "app/Helpers/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Eiche\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse app config --level=5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
+

@@ -1,0 +1,13 @@
+/**
+ * Eiche Hotel - Sistema de Hotelaria e Cobrança
+ * Arquivo CSS Principal - Importa todos os estilos
+ * 
+ * @version 2.0
+ */
+
+@import url('./variables.css');
+@import url('./base.css');
+@import url('./components.css');
+@import url('./layout.css');
+@import url('./pages/login.css');
+

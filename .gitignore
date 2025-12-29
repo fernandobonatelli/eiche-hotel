@@ -1,0 +1,84 @@
+# ==========================
+# Eiche Hotel - Git Ignore
+# ==========================
+
+# Dependências
+/vendor/
+node_modules/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+storage/logs/*
+!storage/logs/.gitkeep
+
+# Cache
+*.cache
+.php-cs-fixer.cache
+
+# Uploads (manter estrutura, ignorar arquivos)
+storage/uploads/*
+!storage/uploads/.gitkeep
+
+# Backups
+*.sql.gz
+*.bak
+*.backup
+
+# IDEs e Editores
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+*.swp
+*.swo
+*~
+
+# Sistema Operacional
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# PHP
+*.phar
+
+# Composer
+composer.lock
+
+# Arquivos temporários
+*.tmp
+*.temp
+/tmp/
+
+# Arquivos de migração executados
+migration/.migration_lock
+
+# Sessões PHP
+sess_*
+
+# Arquivos de configuração local (se existirem)
+config/local.php
+config/*.local.php
+
+# PHPUnit
+.phpunit.result.cache
+phpunit.xml
+
+# PHPStan
+phpstan.neon
+
+# Arquivos de build
+/build/
+/dist/
+
