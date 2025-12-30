@@ -160,12 +160,6 @@ composer dump-autoload
 ## 📄 Licença
 
 GNU General Public License v3.0
-
-## 🤝 Suporte
-
-- Email: contato@eiche.com.br
-- Site: http://www.eiche.com.br
-
 ---
 
 Desenvolvido com ❤️ para Pousada Bona
