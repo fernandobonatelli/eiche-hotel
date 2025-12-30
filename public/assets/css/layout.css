@@ -1,5 +1,5 @@
 /**
- * Eiche Hotel - Layout Principal
+ * Pousada Bona - Layout Principal
  * Sidebar, Header, Main Content
  */
 
@@ -25,33 +25,41 @@
     overflow: hidden;
 }
 
+/* Sidebar colapsada - largura maior para não cortar ícones */
 .sidebar.collapsed {
-    width: var(--sidebar-collapsed-width);
+    width: 80px;
 }
 
 .sidebar-header {
     display: flex;
     align-items: center;
     gap: var(--space-3);
-    padding: var(--space-5);
+    padding: var(--space-4);
     border-bottom: 1px solid rgb(255 255 255 / 0.05);
+    min-height: 64px;
+    overflow: visible;
 }
 
 .sidebar-logo {
     display: flex;
     align-items: center;
-    gap: var(--space-3);
+    gap: var(--space-2);
+    flex: 1;
+    min-width: 0;
 }
 
 .sidebar-logo-icon {
     width: 40px;
     height: 40px;
+    min-width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-500), var(--accent-500));
-    border-radius: var(--radius-xl);
+    background: #2d5a3d;
+    border-radius: 50%;
     color: white;
+    font-weight: bold;
+    flex-shrink: 0;
     font-size: var(--text-xl);
     font-weight: var(--font-bold);
     flex-shrink: 0;
@@ -59,20 +67,31 @@
 
 .sidebar-logo-text {
     font-family: var(--font-display);
-    font-size: var(--text-xl);
-    font-weight: var(--font-bold);
+    font-size: 15px;
+    font-weight: 600;
     color: white;
     white-space: nowrap;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+.sidebar-logo-img {
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
 }
 
 .sidebar.collapsed .sidebar-logo-text {
     opacity: 0;
     visibility: hidden;
+    width: 0;
 }
 
 /* Sidebar Toggle Button */
 .sidebar-toggle {
-    display: none;
+    display: flex;
     width: 32px;
     height: 32px;
     align-items: center;
@@ -84,17 +103,12 @@
     border-radius: var(--radius-md);
     cursor: pointer;
     transition: all var(--transition-fast);
+    flex-shrink: 0;
 }
 
 .sidebar-toggle:hover {
     background-color: rgb(255 255 255 / 0.1);
     color: white;
-}
-
-@media (min-width: 1024px) {
-    .sidebar-toggle {
-        display: flex;
-    }
 }
 
 /* Sidebar Navigation */
@@ -116,11 +130,15 @@
     letter-spacing: 0.1em;
     color: var(--gray-500);
     white-space: nowrap;
+    transition: opacity 0.2s, visibility 0.2s;
 }
 
 .sidebar.collapsed .nav-section-title {
     opacity: 0;
     visibility: hidden;
+    height: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-menu {
@@ -184,11 +202,13 @@
     white-space: nowrap;
     font-size: var(--text-sm);
     font-weight: var(--font-medium);
+    transition: opacity 0.2s, visibility 0.2s;
 }
 
 .sidebar.collapsed .nav-item-text {
     opacity: 0;
     visibility: hidden;
+    width: 0;
 }
 
 .nav-item-badge {
@@ -247,11 +267,13 @@
 .user-info {
     flex: 1;
     min-width: 0;
+    transition: opacity 0.2s, visibility 0.2s;
 }
 
 .sidebar.collapsed .user-info {
     opacity: 0;
     visibility: hidden;
+    width: 0;
 }
 
 .user-name {
@@ -275,8 +297,63 @@
     transition: margin-left var(--transition-normal);
 }
 
-.sidebar.collapsed ~ .main-wrapper {
-    margin-left: var(--sidebar-collapsed-width);
+.main-wrapper.sidebar-collapsed {
+    margin-left: 80px;
+}
+
+/* Sidebar colapsada - ajustes */
+.sidebar.collapsed .sidebar-header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3);
+    gap: var(--space-2);
+}
+
+.sidebar.collapsed .sidebar-logo {
+    justify-content: center;
+    width: 100%;
+}
+
+.sidebar.collapsed .sidebar-logo-img {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    display: block;
+    margin: 0 auto;
+}
+
+.sidebar.collapsed .sidebar-logo-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+.sidebar.collapsed .sidebar-toggle {
+    margin: 0 auto;
+    transform: rotate(180deg);
+}
+
+.sidebar.collapsed .nav-item {
+    justify-content: center;
+    padding: var(--space-3);
+}
+
+.sidebar.collapsed .nav-item-icon {
+    margin: 0;
+}
+
+.sidebar.collapsed .user-menu {
+    justify-content: center;
+    padding: var(--space-3);
+}
+
+.sidebar.collapsed .user-avatar {
+    margin: 0;
+    width: 36px;
+    height: 36px;
 }
 
 /* Header */
@@ -498,14 +575,38 @@
 @media (max-width: 1023px) {
     .sidebar {
         transform: translateX(-100%);
+        width: var(--sidebar-width);
     }
     
     .sidebar.open {
         transform: translateX(0);
     }
     
+    /* No mobile não usa collapsed */
+    .sidebar.collapsed {
+        width: var(--sidebar-width);
+    }
+    
+    .sidebar.collapsed .sidebar-logo-text,
+    .sidebar.collapsed .nav-section-title,
+    .sidebar.collapsed .nav-item-text,
+    .sidebar.collapsed .user-info {
+        opacity: 1;
+        visibility: visible;
+        width: auto;
+    }
+    
+    .sidebar.collapsed .nav-item {
+        justify-content: flex-start;
+        padding: var(--space-3) var(--space-4);
+    }
+    
+    .sidebar.collapsed .user-menu {
+        justify-content: flex-start;
+    }
+    
     .main-wrapper {
-        margin-left: 0;
+        margin-left: 0 !important;
     }
     
     .sidebar-overlay {
@@ -519,7 +620,7 @@
         transition: all var(--transition-fast);
     }
     
-    .sidebar.open + .sidebar-overlay {
+    .sidebar-overlay.active {
         opacity: 1;
         visibility: visible;
     }
@@ -558,6 +659,10 @@
 .stat-card:hover {
     box-shadow: var(--shadow-md);
     transform: translateY(-2px);
+}
+
+.stat-card.clickable {
+    cursor: pointer;
 }
 
 .stat-icon {
@@ -640,4 +745,3 @@
 .stat-change.negative {
     color: var(--danger-600);
 }
-

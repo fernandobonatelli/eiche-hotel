@@ -1,6 +1,6 @@
 <?php
 /**
- * Eiche Hotel - Sistema de Hotelaria e Cobrança
+ * Pousada Bona - Sistema de Hotelaria
  * Configurações Gerais do Sistema - PHP 8.x
  * 
  * @version 2.0
@@ -28,7 +28,7 @@ define('BASE_URL', $protocol . $host . '/eiche/v2');
 
 // Sistema
 $config = [
-    'app_name' => 'Eiche Hotel',
+    'app_name' => 'Pousada Bona',
     'app_description' => 'Sistema de Hotelaria e Cobrança',
     'timezone' => 'America/Sao_Paulo',
     'locale' => 'pt_BR',

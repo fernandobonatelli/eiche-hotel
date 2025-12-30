@@ -1,6 +1,6 @@
 <?php
 /**
- * Eiche Hotel - Funções Auxiliares
+ * Pousada Bona - Funções Auxiliares
  * Compatível com PHP 8.x
  * 
  * @version 2.0

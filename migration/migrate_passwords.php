@@ -1,6 +1,6 @@
 <?php
 /**
- * Eiche Hotel - Script de Migração de Senhas
+ * Pousada Bona - Script de Migração de Senhas
  * Converte senhas MD5 para BCrypt
  * 
  * IMPORTANTE: Execute este script apenas uma vez após a migração!
@@ -17,7 +17,7 @@ echo "<!DOCTYPE html><html><head><meta charset='utf-8'><title>Migração de Senh
 echo "<style>body{font-family:sans-serif;padding:40px;max-width:800px;margin:0 auto}";
 echo ".success{color:#27ae60}.error{color:#e74c3c}.info{color:#3498db}";
 echo "pre{background:#f5f5f5;padding:20px;border-radius:8px;overflow-x:auto}</style></head><body>";
-echo "<h1>🔐 Migração de Senhas - Eiche Hotel</h1>";
+echo "<h1>🔐 Migração de Senhas - Pousada Bona</h1>";
 
 // Verificar se já foi executado
 $lockFile = __DIR__ . '/.migration_lock';

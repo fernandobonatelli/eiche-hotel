@@ -1,6 +1,6 @@
 <?php
 /**
- * Eiche Hotel - Logout
+ * Pousada Bona - Logout
  * 
  * @version 2.0
  */

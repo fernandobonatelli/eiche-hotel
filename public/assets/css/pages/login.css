@@ -1,5 +1,5 @@
 /**
- * Eiche Hotel - Página de Login
+ * Pousada Bona - Página de Login
  * Design moderno com animações sutis
  */
 
@@ -74,6 +74,22 @@
     align-items: center;
     gap: var(--space-4);
     margin-bottom: var(--space-12);
+}
+
+.login-logo-img {
+    height: 60px;
+    width: auto;
+    max-width: 60px;
+    object-fit: contain;
+    border-radius: var(--radius-xl);
+}
+
+.mobile-logo-img {
+    height: 48px;
+    width: auto;
+    max-width: 48px;
+    object-fit: contain;
+    border-radius: var(--radius-lg);
 }
 
 .login-branding-logo-icon {

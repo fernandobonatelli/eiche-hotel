@@ -1,12 +1,12 @@
 {
     "name": "eiche/hotel",
-    "description": "Sistema de Hotelaria e Cobrança - Eiche Hotel",
+    "description": "Sistema de Hotelaria - Pousada Bona",
     "type": "project",
     "license": "GPL-3.0-or-later",
     "version": "2.0.0",
     "authors": [
         {
-            "name": "Eiche Servicos",
+            "name": "Pousada Bona",
             "email": "contato@eiche.com.br"
         }
     ],

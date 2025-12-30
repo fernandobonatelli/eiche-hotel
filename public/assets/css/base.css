@@ -1,5 +1,5 @@
 /**
- * Eiche Hotel - Base Styles
+ * Pousada Bona - Base Styles
  * Reset e estilos fundamentais
  */
 
@@ -13,7 +13,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 13px;
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
@@ -39,12 +39,12 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-primary);
 }
 
-h1 { font-size: var(--text-4xl); }
-h2 { font-size: var(--text-3xl); }
-h3 { font-size: var(--text-2xl); }
-h4 { font-size: var(--text-xl); }
-h5 { font-size: var(--text-lg); }
-h6 { font-size: var(--text-base); }
+h1 { font-size: var(--text-2xl); }
+h2 { font-size: var(--text-xl); }
+h3 { font-size: var(--text-lg); }
+h4 { font-size: var(--text-base); }
+h5 { font-size: var(--text-sm); }
+h6 { font-size: var(--text-sm); }
 
 p {
     margin-bottom: var(--space-4);

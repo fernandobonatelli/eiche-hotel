@@ -1,5 +1,5 @@
 /**
- * Eiche Hotel - CSS Variables
+ * Pousada Bona - CSS Variables
  * Design System Moderno
  */
 
@@ -109,15 +109,15 @@
     --font-display: 'Outfit', 'DM Sans', sans-serif;
     --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
     
-    --text-xs: 0.75rem;
-    --text-sm: 0.875rem;
-    --text-base: 1rem;
-    --text-lg: 1.125rem;
-    --text-xl: 1.25rem;
-    --text-2xl: 1.5rem;
-    --text-3xl: 1.875rem;
-    --text-4xl: 2.25rem;
-    --text-5xl: 3rem;
+    --text-xs: 0.7rem;
+    --text-sm: 0.8rem;
+    --text-base: 0.9rem;
+    --text-lg: 1rem;
+    --text-xl: 1.1rem;
+    --text-2xl: 1.25rem;
+    --text-3xl: 1.4rem;
+    --text-4xl: 1.6rem;
+    --text-5xl: 2rem;
     
     --font-light: 300;
     --font-normal: 400;
@@ -171,9 +171,9 @@
     --z-toast: 800;
     
     /* ===== Layout ===== */
-    --sidebar-width: 280px;
-    --sidebar-collapsed-width: 80px;
-    --header-height: 64px;
+    --sidebar-width: 220px;
+    --sidebar-collapsed-width: 70px;
+    --header-height: 50px;
     --container-max: 1400px;
 }
 

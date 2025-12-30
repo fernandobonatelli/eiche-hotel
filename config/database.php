@@ -1,6 +1,6 @@
 <?php
 /**
- * Eiche Hotel - Sistema de Hotelaria e Cobrança
+ * Pousada Bona - Sistema de Hotelaria
  * Configuração de Banco de Dados com PDO - PHP 8.x
  * 
  * @version 2.0

@@ -1,4 +1,4 @@
-# 🏨 Eiche Hotel - Sistema de Hotelaria v2.0
+# 🏨 Pousada Bona - Sistema de Hotelaria v2.0
 
 Sistema moderno de gestão hoteleira com interface intuitiva e responsiva.
 
@@ -168,5 +168,5 @@ GNU General Public License v3.0
 
 ---
 
-Desenvolvido com ❤️ por Eiche Serviços
+Desenvolvido com ❤️ para Pousada Bona
 

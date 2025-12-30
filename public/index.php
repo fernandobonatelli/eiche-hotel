@@ -1,6 +1,6 @@
 <?php
 /**
- * Eiche Hotel - Página Inicial
+ * Pousada Bona - Página Inicial
  * Redireciona para login ou dashboard
  * 
  * @version 2.0

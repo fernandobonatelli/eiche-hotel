@@ -1,6 +1,6 @@
 <?php
 /**
- * Eiche Hotel - Esqueci minha senha
+ * Pousada Bona - Esqueci minha senha
  * 
  * @version 2.0
  */
@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$pageTitle = 'Recuperar Senha - Eiche Hotel';
+$pageTitle = 'Recuperar Senha - Pousada Bona';
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -78,7 +78,7 @@ $pageTitle = 'Recuperar Senha - Eiche Hotel';
             <div class="login-branding-content">
                 <div class="login-branding-logo">
                     <div class="login-branding-logo-icon">E</div>
-                    <span class="login-branding-logo-text">Eiche Hotel</span>
+                    <span class="login-branding-logo-text">Pousada Bona</span>
                 </div>
                 
                 <h1>
@@ -97,7 +97,7 @@ $pageTitle = 'Recuperar Senha - Eiche Hotel';
                 <div class="login-form-header">
                     <div class="mobile-logo">
                         <div class="mobile-logo-icon">E</div>
-                        <span class="mobile-logo-text">Eiche Hotel</span>
+                        <span class="mobile-logo-text">Pousada Bona</span>
                     </div>
                     
                     <?php if ($success): ?>
@@ -170,7 +170,7 @@ $pageTitle = 'Recuperar Senha - Eiche Hotel';
                 </div>
                 
                 <div class="login-copyright">
-                    <p>&copy; <?= date('Y') ?> Eiche Hotel. Todos os direitos reservados.</p>
+                    <p>&copy; <?= date('Y') ?> Pousada Bona. Todos os direitos reservados.</p>
                 </div>
             </div>
         </div>

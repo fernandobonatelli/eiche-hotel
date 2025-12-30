@@ -1,5 +1,5 @@
 -- =====================================================
--- Eiche Hotel - Script de Atualização do Banco de Dados
+-- Pousada Bona - Script de Atualização do Banco de Dados
 -- Versão 2.0
 -- =====================================================
 -- IMPORTANTE: Faça backup do banco antes de executar!
